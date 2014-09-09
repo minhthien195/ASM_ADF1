@@ -55,17 +55,14 @@ public class Chim extends Frame implements Runnable, MouseListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         frame.setVisible(true);
-        // application listens to its own mouse events
-        //frame.addMouseListener(this);
         frame.setSize(width_panel, height_panel);
 
-        panel = new MyRectangleJPanel(); // changed this line
+        panel = new MyRectangleJPanel(); 
         panel.setSize(width_panel, height_panel);
         panel.addMouseListener(this);
         frame.add(panel);
         panel.validate();
-        frame.setResizable(false);// because you added panel after setVisible was called
-        // because you added panel after setVisible was called
+        frame.setResizable(false);
 
     }
 
